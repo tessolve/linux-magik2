@@ -1,0 +1,79 @@
+/*
+ * Copyright (C) 2015 Freescale Semiconductor, Inc.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 as
+ * published by the Free Software Foundation.
+ */
+
+#include "imx6q-magik2.dts"
+#include "imx6qp.dtsi"
+
+/ {
+	model = "Magik2 i.MX6 Quad Plus Device Board";
+};
+
+&cpu0 {
+	arm-supply = <&reg_arm>;
+	soc-supply = <&reg_soc>;
+};
+
+&ldb {
+        lvds-channel@0 {
+                crtc = "ipu2-di0";
+        };
+
+        lvds-channel@1 {
+                crtc = "ipu2-di1";
+        };
+};
+
+&mxcfb1 {
+	status = "okay";
+};
+
+&mxcfb2 {
+	status = "okay";
+};
+
+&mxcfb3 {
+	status = "okay";
+};
+
+&mxcfb4 {
+	status = "okay";
+};
+
+&ov564x_mipi {
+	DOVDD-supply = <&sw4_reg>; /* 1.8v */
+};
+
+&pre1 {
+	status = "okay";
+};
+
+&pre2 {
+	status = "okay";
+};
+
+&pre3 {
+	status = "okay";
+};
+
+&pre4 {
+	status = "okay";
+};
+
+&prg1 {
+	memory-region = <&memory>;
+	status = "okay";
+};
+
+&prg2 {
+	memory-region = <&memory>;
+	status = "okay";
+};
+
+&sata {
+	status = "okay";
+};
